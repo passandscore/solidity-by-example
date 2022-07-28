@@ -55,3 +55,18 @@ contract SomeContract {
         (uint a, uint b) = abi.decode(result, (uint, uint)); // This is an example of how the result might have been decoded
     }
 }
+
+// STATIC CALL
+// This allows contracts to make calls that are clearly non-state-changing,
+// https://eips.ethereum.org/EIPS/eip-214
+ function parseEditionFromTokenId(address collectionAddress, uint256 tokenId)
+        internal
+        view
+        returns (uint256 editionId, uint256 tokenNumber)
+    {
+        (, bytes memory result) = collectionAddress.staticcall(
+            abi.encodeWithSignature("parseEditionFromTokenId(uint256)", tokenId)
+        );
+
+        (editionId, tokenNumber) = abi.decode(result, (uint256, uint256));
+    }
