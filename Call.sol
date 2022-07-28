@@ -58,6 +58,7 @@ contract SomeContract {
 
 // STATIC CALL
 // This allows contracts to make calls that are clearly non-state-changing,
+// Example: Accessing struct data from an external contract generated an error that only staticCall could fix.
 // https://eips.ethereum.org/EIPS/eip-214
  function parseEditionFromTokenId(address collectionAddress, uint256 tokenId)
         internal
