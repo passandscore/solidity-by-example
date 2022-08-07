@@ -6,7 +6,7 @@ contract helloGeeks
 {
     // We want hash to be of 8 digits 
     // hence we store 10^8 which is 
-    // used to extract first 8 digits 
+    // used to extract last 8 digits 
     // later by Modulus 
     uint hashDigits = 8;
       
