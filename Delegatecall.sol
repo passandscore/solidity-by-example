@@ -1,3 +1,6 @@
+RESOURCES:
+1) https://ethereum.stackexchange.com/questions/89682/parameters-for-delegatecall-in-inline-assembly
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
