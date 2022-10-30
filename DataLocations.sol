@@ -7,6 +7,14 @@ Variables are declared as either storage, memory or calldata to explicitly speci
 storage - variable is a state variable (store on blockchain)
 memory - variable is in memory and it exists while a function is being called
 calldata - special data location that contains function arguments, only available for external functions
+
+CALLDATA-
+This is the cheapest location to use, but it has a limited size. In particular, that means that functions may be limited in their number of arguments.1 Notable implementation details about calldata are as follows:
+
+It can only be used for function declaration parameters (and not function logic)
+It is immutable (it can't be overwritten and changed)
+It must be used for dynamic parameters of an external function
+It is non-persistent (the value does not persist after the transaction has completed)
 */
 
 contract DataLocations {
