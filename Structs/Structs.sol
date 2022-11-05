@@ -53,3 +53,25 @@ contract Todos {
         todo.completed = !todo.completed;
     }
 }
+
+// ********************************************************************************************************
+// Here are three ways that you can initialize your sample1 variable, populating it with SampleStruct1 data.
+
+function setSample1() public {
+  // method 1
+  sample1.id = 1;
+  sample1.value = 1;
+  sample1.name = "myname";
+  sample1.isCreated = true;
+
+  // method 2
+  sample1 = SampleStruct1({
+    id: 2,
+    value: 2,
+    name: "myname",
+    isCreated: true
+  });
+
+  // method 3
+  sample1 = SampleStruct1(3, 6, "myname", false);
+}
